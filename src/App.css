@@ -2,33 +2,42 @@
   text-align: center;
 }
 
-.menu{
-  width: 30% ;
-  margin-left: auto;
-  left : -100%;
-  height: 100vh ;
+.Faqouter{
+  width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+.faqItems{
+  border: 1px solid black;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.faqItems h2{
+  margin: 0;
+  padding: 6px;
   text-align: left;
-  position: fixed;
-  background-color: gray;
-  padding: 20px;
+  background-color: green;
+  color: whitesmoke;
+}
+.faqItems p{
+  margin: 0px;
+  height: 0px;
+  text-align: left;
   transition: 0.5ms;
-}
-
-.menu ul li {
-  border-left-style: none;
-}
-
-.activeMenu {
-  left : 0%;
-}
-
-.menu-icon{
-  position: absolute;
-  right: 10px;
-  background-color: bisque;
-  width: 25px;
-  height: 30px;
-  margin-top: 5px;
+  padding: 0px;
+  transform: scaleY(0);
 
 }
+
+.showAns{
+  height: auto !important;
+  transform: scaleY(1) !important;
+  padding: 10px !important;
+} 
+
+
+
+
+
 

@@ -1,34 +1,47 @@
+/* eslint-disable no-undef */
+/* eslint-disable eqeqeq */
+
 
 import { useState } from 'react';
 import './App.css';
+import { questions } from './Data/faqQuestions';
 
 function App() {
 
- 
-  let [menustatus, setMenustatus] = useState(false);
-
-
+  const [showans, setShowans] = useState(questions[0].id);
   
+
+
   return (
     <div className="App">
-    <button className="menu-icon" onClick={()=>setMenustatus(!menustatus)}   >&#9776;</button>
-      <div className={`menu ${menustatus ? "activeMenu" : ""}`}>
-        <ul>
-          <li>Home</li><br />
-          <li>About</li><br />
-          <li>Courses</li><br />
-          <li>Contact Us</li><br />
-          <li>LogOut</li><br />
-        </ul>
-      </div>
-     
-     
-    
+      <div>
+        <h1 className="font-serif font-semibold text-3xl mt-5">Full Stack Web Development Course</h1>
+        <div className='Faqouter'>
 
-      
-      
-     
+          {questions.map((FaqItems, i) => {
+            return (
+
+              <div key={i} className="faqItems">
+                <h2 onClick={() => setShowans(FaqItems.id)} className="font-serif font-semibold text-xl" >{FaqItems.question}</h2>
+                <p className={showans == FaqItems.id ? "showAns" : ""}> {FaqItems.answers} </p>
+              </div>
+            )
+          })}
+
+
+          
+
+        </div>
+      </div>
     </div>
+
+
+
+
+
+
+
+
   );
 }
 
